@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind utilities;
+
+/* ===== Custom Fonts ===== */
+@font-face {
+  font-family: "GreatVibes";
+  src: url("../src/assets/fonts/great-vibes.regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "courgette";
+  src: url("../src/assets/fonts/courgette.regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../src/assets/fonts/open-sans.regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../src/assets/fonts/open-sans.semibold.ttf") format("truetype");
+  font-weight: 600;
+}
