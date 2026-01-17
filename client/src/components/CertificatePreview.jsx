@@ -1,12 +1,14 @@
 import logo from '../assets/logo/logo.png';
 
-export default function CertificatePreview() {
+export default function CertificatePreview({ student, scale }) {
+  if (!student) return null;
+
   return (
     <div className='flex justify-center items-start min-h-screen bg-gray-300 overflow-auto'>
       {/* SCALE WRAPPER */}
       <div
         style={{
-          transform: 'scale(0.25)',
+          transform: `scale(${scale})`,
           transformOrigin: 'top center',
         }}
       >
@@ -30,14 +32,14 @@ export default function CertificatePreview() {
           {/* STUDENT NAME */}
           <div
             className='
-              absolute top-[1240px] right-[340px] text-end
+              absolute top-[1230px] right-[340px] text-end
               text-[150px]
               bg-gradient-to-r from-[#e76124] to-[#aa1f23]
               bg-clip-text text-transparent
             '
             style={{ fontFamily: 'courgette' }}
           >
-            Mohammed Aslam. A
+            {student.name}
           </div>
           {/* STUDENT NAME */}
           <div
@@ -45,19 +47,20 @@ export default function CertificatePreview() {
             style={{ fontFamily: 'OpenSans', fontWeight: 400 }}
           >
             <p>
-              for winning the <b>AL-QURAN Memorization Competition</b>,<br />
+              for winning the <b>Al-Quran Memorization Competition</b>,<br />
               <span>
-                <b>30 Suras</b>
+                <b> {student.category} Suras</b>
               </span>
               - Category, securing
               <span>
-                <b> POSITION </b>
+                <b> {student.position} </b>
               </span>
               Place. Prize held on
-              <span><br />
-                <b> 15 JAN 2026 </b>
+              <span>
+                <br />
+                <b> {student.date} </b>
               </span>
-              by <b>RABBI-ZIDNI-ILMAN Online Madarasa</b>.
+              by <b>Rabbi-Zidni-Ilman Online Madarasa</b>.
             </p>
           </div>
           {/* DATE */}
@@ -65,7 +68,7 @@ export default function CertificatePreview() {
             className='absolute bottom-[520px] left-[1720px] text-start text-[60px]'
             style={{ fontFamily: 'OpenSans', fontWeight: 600 }}
           >
-            15 JAN 2026
+            {student.date}
           </div>
         </div>
       </div>
