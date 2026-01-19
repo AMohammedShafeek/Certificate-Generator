@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Certificate</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 3579px;
+            height: 2551px;
+            overflow: hidden;
+        }
+
+        body {
+            background: white;
+        }
+
+        @page {
+            size: 3579px 2551px;
+            margin: 0;
+        }
+
+        /* Fonts */
+        @font-face {
+            font-family: courgette;
+            src: url('../assets/fonts/courgette.regular.ttf');
+        }
+
+        @font-face {
+            font-family: greatVibes;
+            src: url('../assets/fonts/great-vibes.regular.ttf');
+        }
+
+        @font-face {
+            font-family: OpenSans;
+            src: url('../assets/fonts/open-sans.regular.ttf');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: OpenSans;
+            src: url('../assets/fonts/open-sans.semibold.ttf');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /* Wrapper */
+        .Wrapper {
+            overflow: hidden;
+            width: 3579px;
+            height: 2551px;
+            position: relative;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 450px;
+            right: 290px;
+            width: 500px;
+        }
+
+        /* sign */
+        .sign {
+            position: absolute;
+            top: 1420px;
+            right: 40px;
+            width: 1200px;
+        }
+
+        /* Student name */
+        .name {
+            position: absolute;
+            top: 1230px;
+            right: 300px;
+            overflow: visible;
+        }
+
+        .name span {
+            display: inline-block;
+            font-family: courgette;
+            font-size: 150px;
+            padding: 20px 30px;
+            white-space: nowrap;
+
+            background: linear-gradient(to right, #e76124, #aa1f23);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Description */
+        .content {
+            position: absolute;
+            top: 1550px;
+            right: 340px;
+            width: 70%;
+            font-family: OpenSans;
+            font-size: 50px;
+            font-weight: 400;
+            text-align: right;
+        }
+
+        /* Date */
+        .date {
+            position: absolute;
+            bottom: 520px;
+            left: 1730px;
+            font-family: OpenSans;
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        .bg-image {
+            position: absolute;
+            inset: 0;
+            width: 3579px;
+            height: 2551px;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+
+        .logo,
+        .sign,
+        .name,
+        .content,
+        .date {
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Wrapper">
+        <!-- BG-IMAGE -->
+        <img src="./Certificate_BG.png" class="bg-image" />
+
+        <!-- LOGO -->
+        <img src="../assets/logo/logo.png" class="logo" />
+
+        <!-- SIGN -->
+        <img src="../assets/sign/MUMTAJ_SIGN.png" class="sign" />
+
+        <!-- STUDENT NAME -->
+        <div class="name"><span>{{NAME}}</span></div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            for winning the <b>Al-Quran Memorization Competition</b>,<br />
+            <b>{{CATEGORY}} Suras</b> - Category, securing
+            <b>{{POSITION}}</b> Place.
+            Prize held on
+            <br />
+            <b>01/01/2026</b>
+            by <b>Rabbi-Zidni-Ilman Online Madarasa</b>.
+        </div>
+
+        <!-- DATE -->
+        <div class="date">01/01/2026</div>
+    </div>
+</body>
+
+</html>

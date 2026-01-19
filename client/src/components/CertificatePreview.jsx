@@ -1,4 +1,5 @@
 import logo from '../assets/logo/logo.png';
+import sign from '../assets/sign/MUMTAJ_SIGN.png';
 
 export default function CertificatePreview({ student, scale }) {
   if (!student) return null;
@@ -26,7 +27,16 @@ export default function CertificatePreview({ student, scale }) {
             <img
               src={logo}
               alt='Logo'
-              className='absolute w-[500px] top-[450px] right-[290px] w-[200px]'
+              className='absolute w-[500px] top-[450px] right-[290px]'
+            />
+          </div>
+
+          {/* SIGN */}
+          <div className='relative'>
+            <img
+              src={sign}
+              alt='sign'
+              className='absolute w-[1200px] top-[1420px] right-[40px]'
             />
           </div>
           {/* STUDENT NAME */}
